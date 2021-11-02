@@ -6,9 +6,11 @@
 /*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:41:35 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/02 21:33:22 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/02 22:11:58 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<libft.h>
 
 int	ft_isprint(int c)
 {
