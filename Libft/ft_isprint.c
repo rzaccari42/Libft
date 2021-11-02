@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 23:42:28 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/10/27 18:57:06 by rzaccari         ###   ########.fr       */
+/*   Created: 2021/11/02 19:41:35 by rzaccari          #+#    #+#             */
+/*   Updated: 2021/11/02 21:33:22 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-void *ft_memset(void *ptr, int val, size_t len)
+int	ft_isprint(int c)
 {
-    size_t	i;
-
-	i = 0;
-	if (!ptr)
-		return (NULL);
-	while (i < len)
-	{
-		*(unsigned char*)(ptr + i) = *(unsigned char*)val;
-		i++;
-	}
-	return (ptr);
+    return (c >= 32 && c <= 127);
 }
