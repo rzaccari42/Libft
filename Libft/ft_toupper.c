@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 23:59:26 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/07 00:19:38 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/07 00:22:50 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= a && c <= z)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	return (c);
 }
