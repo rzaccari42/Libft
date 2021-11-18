@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:17:01 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/17 03:53:57 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:15:30 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *nptr)
 
 	nbr = 0;
 	sign = 1;
-	while (is_space(*nptr))
+	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-')
 	{

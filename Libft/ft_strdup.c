@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:48:32 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/17 19:59:42 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:59:37 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *str)
 	char	*copy;
 	int		i;
 	int		len;
-    
+
 	i = 0;
 	len = 0;
 	while (str[len])

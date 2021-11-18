@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 23:39:38 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/10 01:27:01 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:07:17 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 
 	i = 0;
 	j = -1;
-	
+
 	while (str[i])
 	{
 		if (str[i] == c)

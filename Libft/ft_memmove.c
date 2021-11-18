@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 19:25:53 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/18 15:41:47 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:55:25 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<libft.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
+	int	i;
 
 	if (dst == NULL && src == NULL)
 		return (dst);
