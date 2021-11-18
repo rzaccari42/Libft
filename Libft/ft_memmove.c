@@ -3,40 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 19:25:53 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/05 21:01:00 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:41:47 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<libft.h>
-#include<unistd.h>
-#include<stdio.h>
+#include<libft.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	const char	*temp = src;
-	
-	while (len--)
+	int		i;
+
+	if (dst == NULL && src == NULL)
+		return (dst);
+	if (src > dst)
+		return (ft_memcpy(dst, src, len));
+	i = (int)len - 1;
+	while (i >= 0)
 	{
-		*(char*)dest++ = *(char*)temp++; 
+		*(char *)(dst + i) = *(char *)(src + i);
+		i--;
 	}
-	return (dest);
-}
-
-int	main()
-{
-	char	source[] = "12345";
-	char	dest[] = "abcde";
-
-	printf("before\n");
-	printf("source : %s\n", source);
-	printf("destination : %s\n", dest);
-
-	ft_memmove(dest, source, 20);
-
-	printf("after\n");
-	printf("source : %s\n", source);
-	printf("destination : %s\n", dest);
+	return (dst);
 }
