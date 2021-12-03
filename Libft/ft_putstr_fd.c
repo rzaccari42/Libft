@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 12:43:07 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/30 13:43:59 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:35:11 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *str, int fd)
 	int	len;
 
 	if (!str)
-		return (NULL);
+		return;
 	len = ft_strlen(str);
 	write(fd, str, len);
 }

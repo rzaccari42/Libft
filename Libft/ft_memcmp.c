@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 19:43:36 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/18 17:17:24 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:31:07 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t len)
 {
+	const unsigned char	*s1;
+	const unsigned char	*s2;
+
+	s1 = str1;
+	s2 = str2;
+	if (len == 0)
+		return (0);
 	while (len--)
 	{
-		if (*(char*)str1 != *(char*)str2)
-			return (*(char*)str1 - *(char*)str2);
-	str1++;
-	str2++;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+	s1++;
+	s2++;
 	}
 	return (0);
 }

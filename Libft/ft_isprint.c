@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:41:35 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/18 16:51:44 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:31:29 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	return (c >= 32 && c <= 127);
+	return (c >= 32 && c <= 126);
 }
