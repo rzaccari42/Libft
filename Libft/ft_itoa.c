@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 15:59:40 by raphzer           #+#    #+#             */
-/*   Updated: 2021/11/29 15:05:27 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:04:45 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int nbr)
 	strlen = nbrlen(nbr) + 1;
 	str = malloc(strlen * sizeof(char));
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 	i = strlen - 1;
 	str[i] = 0;
 	if (nbr < 0)

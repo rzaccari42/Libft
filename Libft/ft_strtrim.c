@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:42:31 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/12/03 17:58:21 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/13 19:07:02 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,30 @@ static int	ischarset(char c, const char *charset)
 	return (0);
 }
 
+static int	skip_start_charset(const char *str, const char *charset)
+{
+	int	i;
+	int	start;
+
+	i = 0;
+	while (str[i] && ischarset(str[i], charset) == 1)
+		i++;
+	start = i;
+	return (start);
+}
+
+static int	skip_end_charset(const char *str, const char *charset)
+{
+	int	i;
+	int	end;
+
+	i = ft_strlen(str) - 1;
+	while (i > 0 && ischarset(str[i], charset) == 1)
+		i--;
+	end = i;
+	return (end);
+}
+
 char	*ft_strtrim(const char *str, const char *charset)
 {
 	char	*strtrim;
@@ -36,14 +60,8 @@ char	*ft_strtrim(const char *str, const char *charset)
 
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (str[i] && ischarset(str[i], charset) == 1)
-		i++;
-	start = i;
-	i = ft_strlen(str) - 1;
-	while (i > 0 && ischarset(str[i], charset) == 1)
-		i--;
-	end = i;
+	start = skip_start_charset(str, charset);
+	end = skip_end_charset(str, charset);
 	if (start > end)
 	{
 		strtrim = malloc(sizeof(char));

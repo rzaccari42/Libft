@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:37:01 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/11/18 16:41:36 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/13 17:02:15 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_bzero(void *str, size_t len)
 {
 	while (len--)
-		*(char*)str++ = '\0';
+		*(char *)str++ = '\0';
 }
