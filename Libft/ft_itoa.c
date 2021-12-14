@@ -6,13 +6,13 @@
 /*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 15:59:40 by raphzer           #+#    #+#             */
-/*   Updated: 2021/12/13 17:04:45 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/14 17:37:29 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	nbrlen(int nbr)
+static int	nbrlen(int nbr)
 {
 	int	i;
 

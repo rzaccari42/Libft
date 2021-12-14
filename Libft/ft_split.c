@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:49:28 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/12/03 17:39:12 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/14 17:39:35 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdbool.h>
 
-static int	ft_wordlen(char const *str, char c)
+static int	wordlen(char const *str, char c)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ static int	ft_wordlen(char const *str, char c)
 	return (i);
 }
 
-static int	ft_count_word(char const *str, char c)
+static int	count_word(char const *str, char c)
 {
 	_Bool	is_in_word;
 	int		i;
@@ -52,7 +52,7 @@ static int	ft_count_word(char const *str, char c)
 	return (word_count);
 }
 
-static char	**ft_free_res(char **res, int words)
+static char	**free_res(char **res, int words)
 {
 	int	i;
 
@@ -68,7 +68,7 @@ static char	**ft_free_res(char **res, int words)
 	return (NULL);
 }
 
-static char	**ft_fill_res(char const *str, char c, char ***res, int word_count)
+static char	**fill_res(char const *str, char c, char ***res, int word_count)
 {
 	int		i;
 	int		j;
@@ -87,10 +87,10 @@ static char	**ft_fill_res(char const *str, char c, char ***res, int word_count)
 		if (!is_in_word)
 		{
 			is_in_word = true;
-			(*res)[j] = malloc(sizeof(char) * (ft_wordlen(&str[i], c) + 1));
+			(*res)[j] = malloc(sizeof(char) * (wordlen(&str[i], c) + 1));
 			if (!(*res)[j])
-				return (ft_free_res(*res, (j - 1)));
-			ft_strlcpy((*res)[j++], &str[i], (ft_wordlen(&str[i], c) + 1));
+				return (free_res(*res, (j - 1)));
+			ft_strlcpy((*res)[j++], &str[i], (wordlen(&str[i], c) + 1));
 		}
 	}
 	return (*res);
@@ -103,11 +103,11 @@ char	**ft_split(char const *str, char c)
 
 	if (!str)
 		return (NULL);
-	word_count = ft_count_word(str, c);
+	word_count = count_word(str, c);
 	res = malloc(sizeof(char *) * (word_count + 1));
 	if (!res)
 		return (NULL);
-	res = ft_fill_res(str, c, &res, word_count);
+	res = fill_res(str, c, &res, word_count);
 	res[word_count] = NULL;
 	return (res);
 }

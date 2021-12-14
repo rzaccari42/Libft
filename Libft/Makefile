@@ -6,7 +6,7 @@
 #    By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/06 20:10:32 by imorina           #+#    #+#              #
-#    Updated: 2021/12/13 16:52:54 by rzaccari         ###   ########.fr        #
+#    Updated: 2021/12/14 17:28:10 by rzaccari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCS_BONUS =	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
 
 
 OBJS	=		${SRCS:.c=.o}
-OBJS_BONUS	=	${SRCS_BONUS:.c=.o }
+OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
 
 all: $(NAME)
 
