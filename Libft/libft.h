@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 23:42:28 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/12/13 19:10:45 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/15 19:29:57 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 */
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *str, size_t len);
-void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -43,7 +43,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *ptr, int val, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *str, int fd);
-void	ft_putnbr_fd(int nbr, int fd);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *str, int fd);
 char	**ft_split(char const *str, char c);
 char	*ft_strchr(const char *str, int c);

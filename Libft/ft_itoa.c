@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 15:59:40 by raphzer           #+#    #+#             */
-/*   Updated: 2021/12/14 17:37:29 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/15 19:28:45 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,19 @@ static int	nbrlen(int nbr)
 char	*ft_itoa(int nbr)
 {
 	char	*str;
-	int		strlen;
 	int		i;
 
-	strlen = nbrlen(nbr) + 1;
-	str = malloc(strlen * sizeof(char));
+	str = malloc((nbrlen(nbr) + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	i = strlen - 1;
+	i = nbrlen(nbr);
 	str[i] = 0;
 	if (nbr < 0)
 	{
 		str[0] = '-';
 		str[--i] = -(nbr % 10) + 48;
-		nbr /= -10;
+		if (nbr < -9)
+			nbr /= -10;
 	}
 	if (nbr == 0)
 		str[--i] = (nbr % 10) + 48;
