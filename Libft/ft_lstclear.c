@@ -6,7 +6,7 @@
 /*   By: rzaccari <rzaccari@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 23:43:59 by rzaccari          #+#    #+#             */
-/*   Updated: 2021/12/10 01:37:43 by rzaccari         ###   ########.fr       */
+/*   Updated: 2021/12/16 18:19:33 by rzaccari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*current;
 
 	current = *lst;
+	if (!*lst || !del)
+		return ;
 	while (current)
 	{
-		ft_lstdelone(current, del);
-		current = current->next;
+		current = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = current;
 	}
 	*lst = NULL;
 }
